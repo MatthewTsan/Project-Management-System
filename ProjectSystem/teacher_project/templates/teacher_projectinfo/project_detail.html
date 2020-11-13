@@ -1,0 +1,69 @@
+{% extends 'teacher_projectinfo/base_teacher_project.html' %}
+
+{% block detail %}
+	<table cellpadding='0' cellspacing='0' class='formBannerTitle formBannerTitle361'>
+		<tr>
+			<td class='titleLeft titleLeft361' valign='top'></td>
+			<td class='titleCenter titleCenter361' valign='top'>
+				<div class='titleText titleText361'>
+					<span class='bannerNormalTitle fk_mainTitle mainTitle mainTitle361'>查看提交</span>
+					<div class='bannerTextOutWrap j_doubleTitleSkin'>
+						<span class='bannerTextInnerWrap'>
+							<span class='doubleTitleWrap doubleTitleWrap361'>
+								<p class='mainTitleWrap'>
+								<span class='fk_mainTitle mainTitle mainTitle361'>查看提交</span>
+								</p>
+								<p class='titleUnderAidLine0 dividingLine dividingLine361'></p>
+							</span>
+							<p class='titleInnerAidLine0 dividingLine dividingLine361'></p>
+							<p class='titleInnerAidLine1 dividingLine dividingLine361'></p>
+							<p class='titleInnerAidLine dividingLineDefault dividingLineDefault361'></p>
+						</span>
+					</div>
+				</div>
+			</td>											
+		</tr>
+	</table>
+
+	<table class='formMiddle formMiddle361' style='height:527px; ' cellpadding='0' cellspacing='0'>
+		<tr>
+		<td class='formMiddleLeft formMiddleLeft361'></td>
+		<td class='formMiddleCenter formMiddleCenter361' valign='top'>
+			<div class="formMiddleContent formMiddleContent361 fk-formContentOtherPadding" tabstyle="0" style="height: 478px; overflow-y: hidden;">
+				<div class='richContent richContent0'>
+					<table border="1px" style="width: 600px">
+					{% for item in p_info %}
+						<tr>
+							<th>项目名称</th>
+							<td>{{item.0}}:{{item.1}}</td>
+						</tr>
+						<tr>
+							<th>创建者</th>
+							<td>{{item.3}}</td>
+						</tr>
+						<tr style="height: 50px">
+							<th>内容</th>
+							<td>{{item.2}}</td>
+						</tr>
+					{% endfor %}
+					</table>
+
+					<table border="4px" style="width: 600px">
+					提交结果
+					<tr>
+						<th>作者</th>
+						<th style="width: 400px">内容</th>
+					</tr>
+					<tr>
+						<td>{{studentname}}</td>
+						<td style="height: 50px">{{ content }}</td>
+					</tr>
+					</table>
+
+					<input type="button" name="Submit" value="返回" onclick="javascript:history.back(1)" />
+				</div>
+			</div>
+		</td>
+		</tr>
+	</table>
+{% endblock %}

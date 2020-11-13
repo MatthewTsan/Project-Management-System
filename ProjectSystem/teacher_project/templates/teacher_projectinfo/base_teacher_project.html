@@ -1,0 +1,171 @@
+{% extends 'projectsystem/base_all.html' %}
+
+{% block title %}
+教师系统
+{% endblock %}
+
+{% block content %}
+<table id="webContainerTable" class="webContainerTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="webContainer" class="webContainer">
+						<div id="container" class="container">
+							<table class="containerTop" cellpadding='0' cellspacing='0'>
+								<tr valign='top'>
+									<td class="left"></td>
+									<td class="center"></td>
+									<td class="right"></td>
+								</tr>
+							</table>
+
+							<table class="containerMiddle" cellpadding='0' cellspacing='0'>
+								<tr valign='top'>
+									<td id="containerMiddleLeft" class="containerMiddleLeft"></td>
+									<td class="containerMiddleCenter">
+										<div id="containerMiddleCenterTop" class="containerMiddleCenterTop"></div>
+
+				<div id="containerForms" class="containerForms">
+					<div id="topForms" class="column forms mainForms topForms" style='display:none'></div>
+
+					<table class="containerFormsMiddle" cellpadding='0' cellspacing='0'>
+						<tr>
+							<td valign="top" id="containerFormsLeft" class="containerFormsLeft" >
+								<div class="containerFormsLeftTop"></div>
+								<div id="leftForms" class="column forms sideForms leftForms">
+									<div id="module363" _indexclass="formIndex1" _modulestyle="51" _moduleid="363" class="form  formIndex1 formStyle51" title="" style="height: 259px;" _side="0" _intab="0" _inmulmcol="0" _infullmeasure="0" _inpack="0" _autoheight="0" _global="false" _independent="false">
+										<table class='formTop formTop363' cellpadding='0' cellspacing='0'><tr><td class='left'></td><td class='center'></td><td class='right'></td></tr></table>
+										<table class='formBanner formBanner363' cellpadding='0' cellspacing='0' style=''><tr>
+										<td class='left left363'></td>
+										<td class='center center363' valign='top'>
+										<table cellpadding='0' cellspacing='0' class='formBannerTitle formBannerTitle363'><tr>
+										<td class='titleLeft titleLeft363' valign='top'>
+										</td>
+										<td class='titleCenter titleCenter363' valign='top'>
+										<div class='titleText titleText363'>
+										<span class='bannerNormalTitle fk_mainTitle mainTitle mainTitle363'>用户登录</span>
+										</div>
+										</td>
+										<td class='titleRight titleRight363' valign='top'>
+										</td>
+										</tr></table>
+										</td>
+										<td class='right right363'></td>
+										</tr></table>
+										
+										
+										<table class='formMiddle formMiddle363' style='height:259px; ' cellpadding='0' cellspacing='0'>
+										<tr>
+										<form method="POST">
+										<td class='formMiddleLeft formMiddleLeft363'></td>
+										<td class='formMiddleCenter formMiddleCenter363' valign='top'>
+										<div class='formMiddleContent formMiddleContent363 fk-formContentOtherPadding' tabStyle='0'>
+										{% if string %}
+										<div>{{string}}</div>
+										{% endif %}
+										<div class='J_memberLoginPanel memberLoginPanel member'>
+										<div class='memberLoginItemList'>
+										<div class='J_memberLoginItem memberLoginItem itemSpace'>
+											hello {{ username }}
+										</div>
+										
+										<div>
+										<style>
+										#sub{width:180px;height:45px;line-height:35px;background:#ffad2b no-repeat;color:white;font-size:16px;font-family:微软雅黑;border:none;}
+										</style>
+										
+										<!-- <input hidefocus='true' type="submit" value="注  销"> -->
+										<a href="/login/logout">注销</a>
+										</div>
+										
+										</div>
+										
+										</div>
+										<div class='memberMsg'></div>
+										</div>
+										</td>
+										<td class='formMiddleRight formMiddleRight363'></td>
+										
+										</form>
+										</tr>
+										</table>
+										
+										
+										<table class='formBottom formBottom363' cellpadding='0' cellspacing='0'><tr><td class='left left363'></td><td class='center center363'></td><td class='right right363'></td></tr></table>
+										<div class='clearfloat clearfloat363'></div>
+									</div>
+									
+									<div id="module302" _indexclass="formIndex2" _modulestyle="1" _moduleid="302" class="form form302 formIndex2 formStyle1" title="" style="height: 261px;" _side="0" _intab="0" _inmulmcol="0" _infullmeasure="0" _inpack="0" _autoheight="0" _global="true" _independent="false">
+										<table class='formTop formTop302' cellpadding='0' cellspacing='0'><tr><td class='left'></td><td class='center'></td><td class='right'></td></tr></table>
+										<table class='formBanner formBanner302' cellpadding='0' cellspacing='0' style=''><tr>
+										<td class='left left302'></td>
+										<td class='center center302' valign='top'>
+										<table cellpadding='0' cellspacing='0' class='formBannerTitle formBannerTitle302'><tr>
+										<td class='titleLeft titleLeft302' valign='top'>
+										</td>
+										<td class='titleCenter titleCenter302' valign='top'>
+										<div class='titleText titleText302'>
+										<span class='bannerNormalTitle fk_mainTitle mainTitle mainTitle302'>联系方式</span>
+										</div>
+										</td>
+										<td class='titleRight titleRight302' valign='top'>
+										</td>
+										</tr></table>
+										</td>
+										<td class='right right302'></td>
+										</tr></table>
+										<table class='formMiddle formMiddle302' style='height:261px; ' cellpadding='0' cellspacing='0'><tr>
+										<td class='formMiddleLeft formMiddleLeft302'></td>
+										<td class='formMiddleCenter formMiddleCenter302' valign='top'>
+										<div class='formMiddleContent formMiddleContent302 fk-formContentOtherPadding' tabStyle='0'>
+											<div class='richContent richContent0'>
+												<p><strong>联系人：</strong>XXXXX</p>
+												<p><strong>电　话：</strong>XXXXX</p>
+												<p><strong>邮　箱：</strong>XXXXX</p>
+												<p><strong>地　址：</strong>XXXXX</p>
+												<p><br /></p>
+											</div>
+										</div>
+										</td>
+										<td class='formMiddleRight formMiddleRight302'></td>
+										</tr></table>
+										<table class='formBottom formBottom302' cellpadding='0' cellspacing='0'><tr><td class='left left302'></td><td class='center center302'></td><td class='right right302'></td></tr></table>
+										<!--<div class='clearfloat clearfloat302'></div>-->
+									</div>
+								</div>
+								<div class="containerFormsLeftBottom">
+								</div>
+							</td>
+
+							<td valign="top" id="containerFormsCenter" class="containerFormsCenter">
+					
+							<div id="centerTopForms" class="column forms mainForms centerTopForms" >
+								<div id="module361" _indexclass="formIndex1" _modulestyle="1" _moduleid="361" systempattern="456" class="form form361 formIndex1 formStyle1 jz-modulePattern456" title="" style="height: 527px;" _side="0" _intab="0" _inmulmcol="0" _infullmeasure="0" _inpack="0" _autoheight="0" _global="false" _independent="false">
+									<table class='formTop formTop361' cellpadding='0' cellspacing='0'>
+										<tr>
+											<td class='left'></td>
+											<td class='center'></td>
+											<td class='right'></td>
+										</tr>
+									</table>
+									<table class='formBanner formBanner361' cellpadding='0' cellspacing='0' style=''>
+									{% block detail %}
+									{% endblock %}
+
+
+									</table>
+								</div>
+							</td>							
+						</tr>
+					</table>
+							</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+					</div>
+				</td>
+			</tr>
+		</table>	
+
+{% endblock %}

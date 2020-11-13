@@ -1,0 +1,67 @@
+{% extends 'teacher_projectinfo/base_teacher_project.html' %}
+
+{% block detail %}
+	<table cellpadding='0' cellspacing='0' class='formBannerTitle formBannerTitle361'>
+		<tr>
+			<td class='titleLeft titleLeft361' valign='top'></td>
+			<td class='titleCenter titleCenter361' valign='top'>
+				<div class='titleText titleText361'>
+					<span class='bannerNormalTitle fk_mainTitle mainTitle mainTitle361'>作业列表</span>
+					<div class='bannerTextOutWrap j_doubleTitleSkin'>
+						<span class='bannerTextInnerWrap'>
+							<span class='doubleTitleWrap doubleTitleWrap361'>
+								<p class='mainTitleWrap'>
+								<span class='fk_mainTitle mainTitle mainTitle361'>作业列表</span>
+								</p>
+								<p class='titleUnderAidLine0 dividingLine dividingLine361'></p>
+							</span>
+							<p class='titleInnerAidLine0 dividingLine dividingLine361'></p>
+							<p class='titleInnerAidLine1 dividingLine dividingLine361'></p>
+							<p class='titleInnerAidLine dividingLineDefault dividingLineDefault361'></p>
+						</span>
+					</div>
+				</div>
+			</td>											
+		</tr>
+	</table>
+
+	<table class='formMiddle formMiddle361' style='height:527px; ' cellpadding='0' cellspacing='0'>
+		<tr>
+		<td class='formMiddleLeft formMiddleLeft361'></td>
+		<td class='formMiddleCenter formMiddleCenter361' valign='top'>
+			<div class="formMiddleContent formMiddleContent361 fk-formContentOtherPadding" tabstyle="0" style="height: 478px; overflow-y: hidden;">
+				<div class='richContent richContent0'>
+					<table border="4px">
+					<tr>
+					{% for item in tablename %}
+					<th>{{item}}</th>
+					{% endfor %}
+					<th> </th>
+					</tr>
+					{% for item in p_info %}
+					<tr>
+					<td>{{item.0}}</td>
+					<td>{{item.1}}</td>
+					<td>{{item.2}}</td>
+					<td>
+					<a href="/teacher/project/list/{{item.0}}/">查看</a>
+					</td>
+					</tr>
+					{% endfor %}
+					</table>
+
+					<form method="POST">
+					<b>添加项目</b><br>
+					<input type="text" name="creat_project_name" value="项目名称" /><br>
+					<textarea type="text" style="width:600px; height:200px;" name="creat_project_content"></textarea>
+					<br>
+					<input type="submit" value="提交" />	
+					</form>
+
+					<input type="button" name="Submit" value="返回" onclick="javascript:history.back(1)" />
+				</div>
+			</div>
+		</td>
+		</tr>
+	</table>
+{% endblock %}

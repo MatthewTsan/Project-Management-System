@@ -1,0 +1,141 @@
+{% extends 'projectsystem/base_all.html' %}
+
+{% block title %}用户注册{% endblock %}
+
+{% block style %}
+<style id='stylemodule'>
+#module302 {height:456px;}
+#module302 .fk-formContentOther {display:none;}
+#module302 .fk-formContentOtherPadding {padding-top:0;}
+#module302 .formBanner302 .formBannerTitle .titleCenter{display:table-cell;}
+#module302 .formBanner302 div.titleText{display:block;}
+#module302 .contentLineIcon {*padding:0;}
+#module302 .contentLineIcon {*width:0;}
+#module302 .formBannerBtn{position:relative;top:0;right:0;margin-right:10px;}
+#module302 .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:40px;width:40px;height:40px;}
+#module302 .fk-formContentOther .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:40px;width:40px;height:40px;}
+#module27 .fk-formContentOther {display:none;}
+#module27 .fk-formContentOtherPadding {padding-top:0;}
+#module27 .formBanner27 .formBannerTitle .titleCenter{display:table-cell;}
+#module27 .formBanner27 div.titleText{display:block;}
+#module27 .contentLineIcon {*padding:0;}
+#module27 .contentLineIcon {*width:0;}
+#module27 .formBannerBtn{position:relative;top:0;right:0;margin-right:10px;}
+#module27 .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:40px;width:40px;height:40px;}
+#module27 .fk-formContentOther .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:40px;width:40px;height:40px;}
+</style>
+{% endblock %}
+
+{% block content %}
+
+		<table id="webContainerTable" class="webContainerTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="webContainer" class="webContainer">
+						<div id="container" class="container">
+							<table class="containerMiddle" cellpadding='0' cellspacing='0'>
+								<tr valign='top'>
+									<td class="containerMiddleCenter">							
+										<div id="containerForms" class="containerForms">
+											<table class="containerFormsMiddle" cellpadding='0' cellspacing='0'>
+												<tr>
+													<td valign="top" id="containerFormsLeft" class="containerFormsLeft" style='display:none'>
+														<div class="containerFormsLeftTop">
+														</div>
+														<div id="leftForms" class="column forms sideForms leftForms">
+															
+														</div>
+														<div class="containerFormsLeftBottom">
+														</div>
+													</td>
+
+													<td valign="top" id="containerFormsCenter" class="containerFormsCenter">
+											
+														<div id="centerTopForms" class="column forms mainForms centerTopForms" >
+															<div id='module27' _indexClass='formIndex1' _modulestyle='52' _moduleid='27'  class='form form27 formIndex1 formStyle52' title='' style='' _side='0' _inTab='0' _inMulMCol='0' _inFullmeasure='0' _inpack='0' _autoHeight='1' _global='false' _independent='false' >
+																<table class='formBanner formBanner27' cellpadding='0' cellspacing='0' style=''>
+																	<tr>
+																		<td class='center center27' valign='top'>
+																			<table cellpadding='0' cellspacing='0' class='formBannerTitle formBannerTitle27'>
+																				<tr>
+																					<td class='titleCenter titleCenter27' valign='top'>
+																						<div class='titleText titleText27'>
+																						<span class='bannerNormalTitle fk_mainTitle mainTitle mainTitle27'>用户注册</span>
+																						</div>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+																
+																
+																
+					<table class='formMiddle formMiddle27' style='' cellpadding='0' cellspacing='0'>
+					
+						<tr>
+						<SCRIPT LANGUAGE="JavaScript">
+							<!--
+							function confirmmsg(form){
+								var name = document.getElementByName('username').value;
+								return confirm('是否提交'+name+'?')
+							}
+							-->
+						</SCRIPT>
+						<form name=formZC method="POST" onsubmit="return confirmmsg(this)" >{% csrf_token %}
+							<td class='formMiddleCenter formMiddleCenter27' valign='top'>
+								<div>{{string}}</div>
+								<div class='formMiddleContent formMiddleContent27 fk-formContentOtherPadding' tabStyle='0'>
+									<div class='J_memberSignupPanel memberSignupPanel'>
+										<div class='memberSignupContent' cellpadding='0' cellspacing='0'>
+
+												<div class='memberSignupItem itemSpace'>
+												<div class='itemLeft' title='name'>用户名:</div><div class='itemMiddle'>
+												<input type="text" name="stuname" class='userAddItem'></div>
+												<div class='itemRight'>*</div>
+
+												<div class='memberSignupItem itemSpace'>
+												<div class='itemLeft' title='name'>密码:</div><div class='itemMiddle'>
+												<input type="text" name="stupasswd" class='userAddItem'></div>
+												<div class='itemRight'>*</div>
+
+												<div class='memberSignupItem itemSpace'>
+												
+												<div class='itemRight'>*</div><br><br>
+											
+											<div>
+											<style>
+											#sub{width:305px;height:45px;line-height:35px;background:#ffad2b no-repeat;color:white;font-size:16px;font-family:微软雅黑;border:none;}
+											</style>
+											
+											<input hidefocus='true' type="submit" value="注   册" id="sub">
+											</div>
+											<br>
+											<br>
+											<br>
+
+								
+											</a>
+										</div>
+									</div>
+								</div>
+							</td>
+						</form>
+						</tr>
+						
+					</table>
+															</div>
+														</div>								
+													</td>						
+												</tr>
+											</table>		
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>		
+{% endblock %}

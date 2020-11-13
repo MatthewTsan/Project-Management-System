@@ -1,0 +1,866 @@
+<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Zzyw图书馆_读者版</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta name="renderer" content="webkit">
+<script type="text/javascript">
+  var _cid = 11999093;
+</script>
+
+<meta name="mobile-agent" content="format=html5;url=http://m.fd11518522.icoc.me/"/>
+
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+
+
+<link rel='canonical' href='http://www.fd11518522.icoc.me'>
+
+
+<link type="text/css" href="..\style\1.css" rel="stylesheet" />
+<link type="text/css" href="..\style\2.css" rel="stylesheet" id="jzThemeFrame"/>
+<link type="text/css" href="..\style\3.css" rel="stylesheet" />
+<link type="text/css" href="..\style\5.css" rel="stylesheet" />
+
+
+<style type="text/css">
+		.forms .jz-modulePattern456  .g_border{border:none;}
+.forms .jz-modulePattern456  .g_borderHover{border:1px solid #ffc001;}
+.forms .jz-modulePattern456  .photoSmallPicForms .cs_triangle_up.g_borderSelected{border-color:#ffc001;}
+.forms .jz-modulePattern456  .productDetail .optionItem .g_borderSelected{border-color:#ffc001;}
+.forms .jz-modulePattern456  .productSmallPicForms .g_borderSelected{border:2px solid #ffc001;}
+.forms .jz-modulePattern456  .photoSmallPicForms .photoSmallPrePicOuter.g_borderSelected{border:2px solid #ffc001;}
+.forms .jz-modulePattern456  .g_selected{background:none;}
+.forms .jz-modulePattern456  .g_selected a{color:#ffc001;}
+.forms .jz-modulePattern456  table.g_selected a{color:#ffc001;}
+.forms .jz-modulePattern456  div.g_selected a{color:#ffc001;}
+.forms .jz-modulePattern456  .g_title{background:none;}
+.forms .jz-modulePattern456  .g_block{background:none;}
+.forms .jz-modulePattern456  .g_hover{background:none;}
+.forms .jz-modulePattern456  .g_tip{background:none;border:none;}
+.forms .jz-modulePattern456  .g_panel{background-color:#f5f5f5;}
+.forms .jz-modulePattern456  .g_hover a{color:#ffc001;}
+.forms .jz-modulePattern456  .g_panelArrow{background:none;}
+.forms .jz-modulePattern456  .g_iText{background:none;border:none;}
+.forms .jz-modulePattern456  .g_iButton{border:none;}
+.forms .jz-modulePattern456  .g_stress{color:#ffc001;}
+.forms .jz-modulePattern456  .g_imgFrame{border:none;}
+.forms .jz-modulePattern456  .g_imgFrameHover{border:none;}
+.forms .jz-modulePattern456  .g_msgArrow{border:none;}
+.forms .jz-modulePattern456  .sort_item2 .sort_submit{background-color:#ffc001;}
+.forms .jz-modulePattern456  .sort_item2 .g_borderSelected{border:2px solid #ffc001;}
+.forms .jz-modulePattern456 {border:none;}
+.forms .jz-modulePattern456  {border-radius:0;}
+.forms .jz-modulePattern456 .formBannerOther .formBannerMore a{font-size:12px;}
+.forms .jz-modulePattern456 .formBannerOther .formBannerMore a{font-weight:normal;}
+.forms .jz-modulePattern456 .formBannerMore {position:relative;}
+.forms .jz-modulePattern456 .formBannerMore {right:-10px;}
+.forms .jz-modulePattern456 .formBannerMore {top:0px;}
+.forms .jz-modulePattern456 .formBannerMore a{text-decoration:none;}
+.forms .jz-modulePattern456 .formBannerOther .formBannerMore a{font-family:微软雅黑;}
+.forms .jz-modulePattern456 .formBannerOther .formBannerMore a{color:#999999;}
+.forms .jz-modulePattern456 .formBannerMore a{background:none;}
+.forms .jz-modulePattern456 .formBannerOther .formBannerMore .bannerMoreInnerSpan{display:inline;}
+.forms .jz-modulePattern456 .formBannerMore a:before{visibility: hidden;}
+.forms .jz-modulePattern456 .formBanner {height:45px;line-height:45px;}
+.forms .jz-modulePattern456 .formBannerTitle {height:45px;line-height:45px;}
+.forms .jz-modulePattern456 div.titleText {font-size:16px;}
+.forms .jz-modulePattern456 div.titleText {font-weight:normal;}
+.forms .jz-modulePattern456 .titleCenter {overflow:visible;}
+.forms .jz-modulePattern456 div.titleText .bannerNormalTitle{left:0px;}
+.forms .jz-modulePattern456 div.titleText  .bannerNormalTitle{top:0px;}
+.forms .jz-modulePattern456 div.titleText {font-family:微软雅黑;}
+.forms .jz-modulePattern456 div.titleText {color:#ffc001;}
+.forms .jz-modulePattern456 .formBanner {background:#ffffff ;}
+.forms .jz-modulePattern456 .formBanner .left {background:none;width:0px;height:0px;}
+.forms .jz-modulePattern456 .formBanner .left {background:none;}
+.forms .jz-modulePattern456 .formBanner .center {background:none;}
+.forms .jz-modulePattern456 .formBanner .right {background:none;}
+.forms .jz-modulePattern456 .formBanner .left {display:none}
+.forms .jz-modulePattern456 .formBanner .right {display:none}
+.forms .jz-modulePattern456 .formBannerTitle .titleLeft {display:none;}
+.forms .jz-modulePattern456 .formBannerTitle .titleCenter {display:table-cell;*display:block;}
+.forms .jz-modulePattern456 .formBannerTitle .titleRight {display:none;}
+.forms .jz-modulePattern456 .formBannerTitle .titleLeft {width:5px;}
+.forms .jz-modulePattern456 .formBannerTitle .titleRight {width:10px;}
+.forms .jz-modulePattern456 .formBannerTitle .titleCenter {background:none;}
+.forms .jz-modulePattern456 .formBannerTitle .titleLeft {border-color:#f13a3a;}
+.forms .jz-modulePattern456 .formBannerTitle .titleLeft {border-style:solid;}
+.forms .jz-modulePattern456 .formBannerTitle .titleLeft {border-width:3px;}
+.forms .jz-modulePattern456 .formBannerTitle .titleLeft {border-top:none;}
+.forms .jz-modulePattern456 .formBannerTitle .titleLeft {border-right:none;}
+.forms .jz-modulePattern456 .formBannerTitle .titleLeft {border-left:none;}
+.forms .jz-modulePattern456 .formBannerTitle .titleCenter {border:none;}
+.forms .jz-modulePattern456 .formBannerTitle .titleLeft {}
+.forms .jz-modulePattern456 .formBannerTitle .titleCenter {border-radius:0;}
+.forms .jz-modulePattern456 .formBannerTitle .titleRight {}
+.forms .jz-modulePattern456 .formBanner {border-left:1px solid #e5e5e5;}
+
+.forms .jz-modulePattern456 .formBanner {border-right:1px solid #e5e5e5;}
+
+.forms .jz-modulePattern456 .formBanner {border-top:2px solid #ffc001;}
+
+.forms .jz-modulePattern456 .formBanner {border-bottom:1px dotted #d9d9d9;}
+
+.forms .jz-modulePattern456 .formBanner {border-radius:0;}
+.forms .jz-modulePattern456  .formMiddle td.formMiddleCenter {background:#ffffff ;}
+.forms .jz-modulePattern456 .formMiddle {font-family:微软雅黑;}
+.forms .jz-modulePattern456 .formMiddle {color:rgb(102, 102, 102);}
+.forms .jz-modulePattern456 .formMiddle {font-size:14px;}
+.forms .jz-modulePattern456 .formMiddle  a{text-decoration:none;}
+.forms .jz-modulePattern456 .formMiddle  a{font-family:微软雅黑;}
+.forms .jz-modulePattern456 .formMiddle  a{color:#666666;}
+.forms .jz-modulePattern456 .formMiddle  a{font-weight:normal;}
+.forms .jz-modulePattern456 .formMiddle  a{font-size:14px;}
+.forms .jz-modulePattern456  textarea{line-height:26px;}
+.forms .jz-modulePattern456  textarea::-webkit-input-placeholder{line-height:26px;}
+.forms .jz-modulePattern456  textarea:-moz-placeholder /* firefox 18- */{line-height:26px;}
+.forms .jz-modulePattern456  textarea::-moz-placeholder/* firefox 19+ */{line-height:26px;}
+.forms .jz-modulePattern456  textarea::-ms-textarea-placeholder{line-height:26px;}
+.forms .jz-modulePattern456  input::-webkit-input-placeholder{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  textarea::-webkit-input-placeholder{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  input:-moz-placeholder{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  textarea:-moz-placeholder /* firefox 18- */{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  input::-moz-placeholder{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  textarea::-moz-placeholder/* firefox 19+ */{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  input::-ms-input-placeholder{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  textarea::-ms-textarea-placeholder{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  input[type="text"]{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  input[type="tel"]{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  input[type="email"]{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  input[type="password"]{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  textarea{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  select{font-family: 微软雅黑;}
+.forms .jz-modulePattern456  .fk_lowIEPlaceholderStyle{font-family: 微软雅黑;}
+.forms .jz-modulePattern456 .g_sideBtn_tl{font-size:14px;}
+.forms .jz-modulePattern456 .g_sideBtn_tl{font-weight:normal;}
+.forms .jz-modulePattern456 .g_sideBtn_tl{font-family:微软雅黑;}
+.forms .jz-modulePattern456 .g_sideBtn_tl{color:#ffffff;}
+.forms .jz-modulePattern456 .formMiddleLeft {display:table-cell;background:none;}.forms .jz-modulePattern456 .formMiddleRight {display:table-cell;background:none;}.forms .jz-modulePattern456  .formMiddle {border-left:1px solid #e5e5e5;border-right:1px solid #e5e5e5;border-top:none;border-bottom:1px solid #e5e5e5;}.forms .jz-modulePattern456 .formBottom .left {background:none;}.forms .jz-modulePattern456 .formBottom .center {display:table-cell;background:none;}.forms .jz-modulePattern456 .formBottom .right {background:none;}.forms .jz-modulePattern456 .formBottom .left {display:none}.forms .jz-modulePattern456 .formBottom .right {display:none}.forms .jz-modulePattern456  .g_sideBtn_c{padding:5px 5px 5px 5px;}
+.forms .jz-modulePattern456 .g_sideBtn{width:34px;}
+.forms .jz-modulePattern456 .g_sideBtn_c{background:#ffc001 ;}
+.forms .jz-modulePattern456 .g_sB_lt{background:#ffc001  ;}
+.forms .jz-modulePattern456 .g_sB_rt{background:#ffc001  ;}
+.forms .jz-modulePattern456 .g_sideBtn_t{width:34px;}
+.forms .jz-modulePattern456 .g_sideBtn_t{height:15px;}
+.forms .jz-modulePattern456 .g_sB_lb{background:#ffc001  ;}
+.forms .jz-modulePattern456 .g_sB_rb{background:#ffc001  ;}
+.forms .jz-modulePattern456 .g_sideBtn.fk-sideLeft {  border-top-right-radius:3px;  border-bottom-right-radius:3px;}
+.forms .jz-modulePattern456 .g_sideBtn.fk-sideRight {border-top-left-radius:3px;  border-bottom-left-radius:3px;}
+.forms .jz-modulePattern456 .g_sideBtn_b{width:34px;}
+.forms .jz-modulePattern456 .g_sideBtn_b{height:15px;}
+.forms .jz-modulePattern456 .contentLineIcon {display:none}
+.forms .jz-modulePattern456  .formMiddle .g_hover, .forms .jz-modulePattern456  .formMiddle .g_hover a{ font-size: 14px; }
+.forms .jz-modulePattern456  .formMiddle .g_hover, .forms .jz-modulePattern456  .formMiddle .g_hover a{ color:#ffc001 }
+.forms .jz-modulePattern456  .formMiddle .g_hover, .forms .jz-modulePattern456  .formMiddle .g_hover a{ font-family: 微软雅黑; }
+.forms .jz-modulePattern456  .formMiddle .g_hover { background: none; }
+.forms .jz-modulePattern456 .formMiddle .g_separator {border-style:dashed;}
+.forms .jz-modulePattern456 .formMiddle .g_separator {border-color:rgb(224, 224, 224);}
+.forms .jz-modulePattern456 .formMiddle .g_separator {border-width:1px;}
+.forms .jz-modulePattern456 .formMiddle .g_separator {display:block;}
+.forms .jz-modulePattern456 .formMiddle .g_separator {border-top:none;}
+.forms .jz-modulePattern456 .formMiddle .g_separator {border-left:none;}
+.forms .jz-modulePattern456 .formMiddle .g_separator {border-right:none;}
+.forms .jz-modulePattern456 .contentLineIcon {*padding:0;}
+.forms .jz-modulePattern456 .contentLineIcon {*width:0;}
+.forms .jz-modulePattern456 .fk-newsLineHeight {height:40px;}
+.forms .jz-modulePattern456 .fk-newsLineHeight .lineBody {height:100%;}
+.forms .jz-modulePattern456 .fk-newsLineHeight .newsTitle {vertical-align:middle;}
+.forms .jz-modulePattern456 .fk-newsLineHeight .newsCalendar {vertical-align:middle;}
+.forms .jz-modulePattern456 .g_foldContainerValue {height:40px;}
+.forms .jz-modulePattern456 .fileList .line {height:40px;}
+.forms .jz-modulePattern456 .fileList .line {line-height:normal;}
+.forms .jz-modulePattern456 .fileList .mainBodyContainer {height:100%;}
+.forms .jz-modulePattern456 .fileList .fileNameText {height:auto;}
+.forms .jz-modulePattern456 .pd_mall_Group .p_m_cotainer {height:40px;}
+.forms .jz-modulePattern456 .navAcrossCotent {height:40px;}
+.forms .jz-modulePattern456 .navAcrossCotent {line-height:normal;}
+.forms .jz-modulePattern456 .link-text-container a {height:40px;}
+.forms .jz-modulePattern456 .link-text-container a {line-height:40px;}
+.forms .jz-modulePattern456  .formMiddle .g_selected { background: none; }
+.forms .jz-modulePattern456  .formMiddle .g_hover a { font-size: 14px; }
+.forms .jz-modulePattern456  .formMiddle .g_hover a { font-family: 微软雅黑; }
+.forms .jz-modulePattern456  .formMiddle .g_hover a { font-weight: normal; }
+.forms .jz-modulePattern456  .formMiddle .g_hover a { text-decoration: blink; }
+.forms .jz-modulePattern456  .formMiddle .g_hover a { color: #ffc001; }
+.forms .jz-modulePattern456  .formMiddle .g_hover { font-size: 14px; }
+.forms .jz-modulePattern456  .formMiddle .g_hover { font-family: 微软雅黑; }
+.forms .jz-modulePattern456  .formMiddle .g_hover { font-weight: normal; }
+.forms .jz-modulePattern456  .formMiddle .g_hover { text-decoration: blink; }
+.forms .jz-modulePattern456  .formMiddle .g_hover { color: #ffc001; }
+.forms .jz-modulePattern456  {border-top:none;border-bottom:none;border-left:none;border-right:none;}
+.forms .jz-modulePattern456  .g_foldBtn{display:block;}
+.forms .jz-modulePattern456  .g_foldBtn{font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.forms .jz-modulePattern456  .g_foldBtn{color:#bbbbbb;}
+.forms .jz-modulePattern456  .g_foldBtn{font-size:40px;}
+.forms .jz-modulePattern456  .g_foldBtn{position:relative;}
+.forms .jz-modulePattern456  .g_foldBtn{right:-10px;}
+.forms .jz-modulePattern456  .g_foldBtn{top:0px;}
+.forms .jz-modulePattern456 .newsNewModuleStyle_three .newsCircle_hover{background-color:#ffc001;}
+.forms .jz-modulePattern456  .pagenation .pagePrev > a.g_hover {color:#ffc001;}
+.forms .jz-modulePattern456  .pagenation .pageNext > a.g_hover {color:#ffc001;}
+.forms .jz-modulePattern456  .pagenation .pageNo > a.g_hover {color:#ffc001;}
+.forms .jz-modulePattern456  .pagenation .pageNo > span {color:#ffc001;}
+.forms .jz-modulePattern456  .pagenation .g_hover{font-size:14px;}
+.forms .jz-modulePattern456  .pagenation .g_hover span{font-size:14px;}
+.forms .jz-modulePattern456  .pagenation span{font-size:14px;}
+.forms .jz-modulePattern456  .fk_setBuyBtnBorderRadius{border-radius:3px;}
+.forms .jz-modulePattern456  .fk_first_mallBuy{width: 88px ;height: 30px; background-image: none; padding: 0; font-size: 14px; text-align: center;border-radius:3px;}
+.forms .jz-modulePattern456  .fk_first_mallBuy span{font-size: 14px; letter-spacing: 0; line-height: 30px;;}
+.product-gallery .product-container .prop-container{height:30px;}
+.forms .jz-modulePattern456  .productTextListProp, .forms .jz-modulePattern456  .productHotTextListProp{height:42px;margin-bottom:20px;}
+.forms .jz-modulePattern456  .productTextListProp b, .forms .jz-modulePattern456  .productHotTextListProp b{font-weight:normal;}
+.forms .jz-modulePattern456  .productTextListTable, .forms .jz-modulePattern456  .productHotTextListTable{margin:14px 0;}
+.forms .jz-modulePattern456  .fk-fixBuyBtnSize{width:88px;}
+.forms .jz-modulePattern456  .fk-fixBuyBtnSize .propAlignCenter{padding:0;}
+.forms .jz-modulePattern456  .fk-mallBuy{background-color:#ffc001;}
+.forms .jz-modulePattern456  .fk-mallBuy span{color:#ffffff;;}
+.forms .jz-modulePattern456  .fk-mallBuy-big span{color:#ffffff;}
+.forms .jz-modulePattern456  .fk-mallBuy-big{background-color:#ffc001;}
+.forms .jz-modulePattern456  .fk-mall-addCart span{color:#ffc001;}
+.forms .jz-modulePattern456  .fk-mall-addCart{border-color:#ffc001;background-color:#ffffff;}
+.forms .jz-modulePattern456 .g_close:hover{color:#666;}
+.forms .jz-modulePattern456 .fk-formContentOther .g_close:hover{color:#666;}
+.forms .jz-modulePattern456 .formBannerBtn{position:relative;top:0;right:0;margin-right:10px;}
+.forms .jz-modulePattern456 .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#999;font-size:40px;width:40px;height:40px;}
+.forms .jz-modulePattern456 .fk-formContentOther .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#999;font-size:40px;width:40px;height:40px;}
+.forms .jz-modulePattern456 .formMiddle .productSmallPicForms .g_imgNext{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:rgba(102,102,102,0.6);font-size:25px;}
+.forms .jz-modulePattern456 .formMiddle .productSmallPicForms .g_imgPrev{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:rgba(102,102,102,0.6);font-size:25px;width:25px;height:25px;}
+.forms .jz-modulePattern456 .formMiddle .productSmallPicForms .g_imgNext:hover{color:#ffc001;}
+.forms .jz-modulePattern456 .formMiddle .productSmallPicForms .g_imgPrev:hover{color:#ffc001;}
+.forms .jz-modulePattern456  .detailInfoTable .fk_productDetailBorderSelect{border-color:#fc001;}
+
+	</style>
+
+
+<style id='stylemodule'>
+#module363 {height:259px;}
+#module363 .fk-formContentOther {display:none;}
+#module363 .fk-formContentOtherPadding {padding-top:0;}
+#module363 .formBanner363 .formBannerTitle .titleCenter{display:table-cell;}
+#module363 .formBanner363 div.titleText{display:block;}
+#module363 .contentLineIcon {*padding:0;}
+#module363 .contentLineIcon {*width:0;}
+#module363 .formBannerBtn{position:relative;top:0;right:0;margin-right:10px;}
+#module363 .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:40px;width:40px;height:40px;}
+#module363 .fk-formContentOther .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:40px;width:40px;height:40px;}
+#module302 {height:261px;}
+#module302 .fk-formContentOther {display:none;}
+#module302 .fk-formContentOtherPadding {padding-top:0;}
+#module302 .formBanner302 .formBannerTitle .titleCenter{display:table-cell;}
+#module302 .formBanner302 div.titleText{display:block;}
+#module302 .contentLineIcon {*padding:0;}
+#module302 .contentLineIcon {*width:0;}
+#module302 .formBannerBtn{position:relative;top:0;right:0;margin-right:10px;}
+#module302 .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:40px;width:40px;height:40px;}
+#module302 .fk-formContentOther .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:40px;width:40px;height:40px;}
+#module361 {height:527px;}
+#module361 .fk-formContentOther {display:none;}
+#module361 .fk-formContentOtherPadding {padding-top:0;}
+#module361 .formBanner361 .formBannerTitle .titleCenter{display:table-cell;}
+#module361 .formBanner361 div.titleText{display:block;}
+#module361 .contentLineIcon {*padding:0;}
+#module361 .contentLineIcon {*width:0;}
+#module361 .formBannerBtn{position:relative;top:0;right:0;margin-right:10px;}
+#module361 .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:40px;width:40px;height:40px;}
+#module361 .fk-formContentOther .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:40px;width:40px;height:40px;}
+#module301 .fk-formContentOther {display:none;}
+#module301 .fk-formContentOtherPadding {padding-top:0;}
+#module301 .formBanner301 .formBannerTitle .titleCenter{display:table-cell;}
+#module301 .formBanner301 div.titleText{display:block;}
+#module301 .contentLineIcon {*padding:0;}
+#module301 .contentLineIcon {*width:0;}
+#module301 .formBannerBtn{position:relative;top:0;right:0;margin-right:10px;}
+#module301 .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:40px;width:40px;height:40px;}
+#module301 .fk-formContentOther .g_close{background:none;font-family:"icomoon",微软雅黑,"microsoft yahei",宋体,新宋体;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:40px;width:40px;height:40px;}
+</style>
+
+<style id='stylenav' type='text/css'>
+#nav .navContent {background-size: contain;}
+#nav  .navLeft{background-size: 100% 100%;}
+#nav  .navRight{background-size: 100% 100%;}
+#nav  .navCenterContent{background-size: contain;}
+</style>
+<style id='styleTitle' type='text/css'>
+#primaryTitle{font-size:27px;}
+#primaryTitle{font-weight:normal;}
+</style>
+
+
+<style type="text/css">
+
+#searchby {
+	position:absolute;
+	left:1px;
+	top:33px;
+	width:326px;
+	height:356px;
+	z-index:1;
+}
+#searched {
+	position:absolute;
+	left:331px;
+	top:67px;
+	width:731px;
+	height:355px;
+	z-index:2;
+}
+
+</style>
+</head>
+
+
+<body class="g_body g_locale2052 " >
+
+	<div id="g_main" class='g_main g_col2 ' style='0' >
+	<div id="web" class="g_web ">
+		<table class="webTopTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="webTop" class="webTop">
+						<div class="fkEditor-wrap">
+							<div id="corpTitle" class="corpTitle corpTitle2" fontpatterntitle="true" style="top:34px;left:47px;;" _linktype="0">
+								<div id="primaryTitle" style="color: rgb(34, 34, 34);">Zzyw图书馆管理系统
+									<span color="#000000" style="color: rgb(0, 0, 0);">&nbsp;</span>
+								</div>
+							</div>
+						</div>
+						<div id="logo" class="logo logo2" style="top:5px;left:0px;display:block;">
+							<a id="logoLink" hidefocus="true" class="link-p" link="javascript:;" onclick="return false;">
+								<img id='logoImg' style='float:left;' height='95'width='85' src='..\image\1.jpg' />
+							</a>
+						</div>
+
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<table class="absTopTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="absTopForms" class="forms sideForms absForms">
+						<div style="position:absolute;"></div><!-- for ie6 -->
+						
+					</div>
+				</td>
+			</tr>
+		</table>
+		<table class="webNavTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="webNav" class="webNav">
+						
+					</div>
+				</td>
+			</tr>
+		</table>
+		<table class="webHeaderTable" cellpadding="0" cellspacing="0" id="webHeaderTable">
+			<tr>
+				<td align="center" class="webHeaderTd">
+					<div id="webHeader" class="webHeader">
+						<table class='headerTable' cellpadding='0' cellspacing='0'>
+							<tr>
+								<td class='headerCusLeft'></td>
+								<td class='headerCusMiddle' align='center' valign='top'>
+									<div class='headerNav'>
+								<div id='nav' class='nav nav2 fixedNavPos '>
+<div class='navMainContent'><table class='navTop' cellpadding='0' cellspacing='0'><tr><td class='navTopLeft'></td><td class='navTopCenter'></td><td class='navTopRight'></td></tr></table>
+<table class='navContent' cellpadding='0' cellspacing='0'>
+<tr>
+<td class='navLeft'></td>
+<td class='navCenterContent' id='navCenterContent' valign='top' align='left'>
+<div id='navCenter' class='navCenter' style='width:680px;'>
+<div class='itemPrev'></div>
+<div class='itemContainer'>
+<table title='' class='item itemCol2 itemIndex1' cellpadding='0' cellspacing='0'  id='nav2' onclick="javascript:window.location.href='logsuccess.html'" >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/' target='_self' onclick='return false;'><span class='itemName0'>首页</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div><table title='' class='item itemCol103 itemIndex2' cellpadding='0' cellspacing='0'  id='nav103' onclick="javascript:window.location.href='1.html'" >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/col.jsp?id=103' target='_self' onclick='return false;'><span class='itemName0'>图书查找</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div><table title='' class='item itemCol110 itemIndex3' cellpadding='0' cellspacing='0' id='nav110' onclick="javascript:window.location.href='1.html'" >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/col.jsp?id=110' target='_self' onclick='return false;'><span class='itemName0'>借阅记录</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div><table title='' class='item itemCol17 itemIndex4' cellpadding='0' cellspacing='0' id='nav17' onclick="javascript:window.location.href='edit.html'" >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/signup.jsp' target='_self' onclick='return false;'><span class='itemName0'>修改个人信息</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div>
+</div>
+<div class='itemNext'></div>
+</div>
+</td>
+<td class='navRight'></td>
+</tr>
+</table>
+<table class='navBottom' cellpadding='0' cellspacing='0'><tr><td class='navBottomLeft'></td><td class='navBottomCenter'></td><td class='navBottomRight'></td></tr></table>
+</div>
+</div>
+
+									</div>
+								</td>
+								<td class='headerCusRight'></td>
+							</tr>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<table class="webBannerTable J_webBannerTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="webBanner" class="webBanner">
+						<table class="bannerTable" cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="bannerLeft"></td>
+								<td class="bannerCenter" align='center' valign='top'>
+									<div class='bannerTop'></div>
+<div id='banner' class='banner extBanner' style='background:url(http://0.ss.faisys.com/image/template/banners/374.jpg?v=) 50% 50% no-repeat;height:280px'  normalheight='280' defaultwidth='0'>
+	<div class='banner defaultBannerMain' style='background:url(http://0.ss.faisys.com/image/template/banners/374.jpg?v=) 50% 50% no-repeat;height:280px'></div>
+	<div class='defaultBannerEdge defaultBannerEdgeRight'></div>
+	<div class='defaultBannerEdge defaultBannerEdgeLeft'></div>
+</div>
+
+									
+								</td>
+								<td class="bannerRight"></td>
+							</tr>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<table class="absMiddleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="absForms" class="forms sideForms absForms">
+						
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+
+
+		<div id="fullmeasureTopForms" class="fullmeasureContainer forms fk-fullmeasureForms fullmeasureForms fullmeasureTopForms" 
+		style='display:none'>
+			
+		<wbr style='display:none;' /></div>
+		
+		<table id="webContainerTable" class="webContainerTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="webContainer" class="webContainer">
+						<div id="container" class="container">
+	<table class="containerTop" cellpadding='0' cellspacing='0'>
+		<tr valign='top'>
+			<td class="left"></td>
+			<td class="center"></td>
+			<td class="right"></td>
+		</tr>
+	</table>
+
+	<table class="containerMiddle" cellpadding='0' cellspacing='0'>
+		<div>
+  <div id="searchby">
+    <table width="304" height="278" border="0" bordercolor="#CCCCCC" bgcolor="#FFFFFF" id="searchby">
+      <tr>
+        <td colspan="2"><div align="center">自定义查询</div></td>
+      </tr>
+      <tr>
+        <td width="123"><form id="form1" name="form1" method="post" action="">
+          <label>
+            <input type="checkbox" name="B_id" id="B_id" />
+            </label>
+        按图书编号
+        </form>    </td>
+        <td width="174"><form id="form6" name="form6" method="post" action="">
+          <label>
+            <input name="bookid" type="text" id="bookid" maxlength="5" />
+            </label>
+        </form>    </td>
+      </tr>
+      <tr>
+        <td><form id="form2" name="form2" method="post" action="">
+          <label>
+            <input type="checkbox" name="B_name" id="B_name" />
+            </label>
+        按图书名称
+        </form>    </td>
+        <td><form id="form7" name="form7" method="post" action="">
+          <label>
+            <input type="text" name="bookname" id="bookname" />
+            </label>
+        </form>    </td>
+      </tr>
+      <tr>
+        <td><form id="form3" name="form3" method="post" action="">
+          <label>
+            <input type="checkbox" name="author" id="author" />
+            </label>
+        按图书作者
+        </form>    </td>
+        <td><form id="form8" name="form8" method="post" action="">
+          <label>
+            <input type="text" name="bookauthor" id="bookauthor" />
+            </label>
+        </form>    </td>
+      </tr>
+      <tr>
+        <td><form id="form4" name="form4" method="post" action="">
+          <label>
+            <input name="category" type="checkbox" id="category" />
+            </label>
+        按图书类别
+        </form>    </td>
+        <td><form id="form9" name="form9" method="post" action="">
+          <label>
+            <input type="text" name="bookcat" id="bookcat" />
+            </label>
+        </form>    </td>
+      </tr>
+      <tr>
+        <td><form id="form5" name="form5" method="post" action="">
+          <label>
+            <input type="checkbox" name="publishing" id="publishing" />
+            </label>
+        按出版社
+        </form>    </td>
+        <td><form id="form10" name="form10" method="post" action="">
+          <label>
+            <input type="text" name="bookpub" id="bookpub" />
+            </label>
+        </form>    </td>
+      </tr>
+      <tr>
+        <td colspan="2"><div align="center">
+          <input type="button" name="search" id="search" value="查找图书" />
+        </div></td>
+      </tr>
+    </table>
+  </div>
+  <div id="searched">
+    <table width="717" height="92" border="0" align="center" bordercolor="#CCCCCC">
+      <tr>
+        <td height="37" colspan="7"><div align="center">查询结果如下</div></td>
+      </tr>
+      <tr>
+        <td width="86">图书编号</td>
+        <td width="86">图书名称</td>
+        <td width="71">作者</td>
+        <td width="117">出版社名称</td>
+        <td width="108">图书类别</td>
+        <td width="120">所在书架号</td>
+        <td width="71">图书余量</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--
+		<tr valign='top'>
+			<td id="containerMiddleLeft" class="containerMiddleLeft">
+					
+					
+					
+					
+			</td>
+
+			<td class="containerMiddleCenter">
+				<div id="containerMiddleCenterTop" class="containerMiddleCenterTop">
+					
+				</div>
+
+				<div id="containerForms" class="containerForms">
+					<div id="topForms" class="column forms mainForms topForms" style='display:none'>
+						
+					</div>
+
+					<table class="containerFormsMiddle" cellpadding='0' cellspacing='0'>
+						<tr>
+							<td valign="top" id="containerFormsLeft" class="containerFormsLeft" >
+								<div class="containerFormsLeftTop">
+								</div>
+								<div id="leftForms" class="column forms sideForms leftForms">
+									<div id='module363' _indexClass='formIndex1' _modulestyle='51' _moduleid='363'  class='form  formIndex1 formStyle51' title='' style='' _side='0' _inTab='0' _inMulMCol='0' _inFullmeasure='0' _inpack='0' _autoHeight='0' _global='false' _independent='false' >
+<table class='formTop formTop363' cellpadding='0' cellspacing='0'><tr><td class='left'></td><td class='center'></td><td class='right'></td></tr></table>
+<table class='formBanner formBanner363' cellpadding='0' cellspacing='0' style=''><tr>
+<td class='left left363'></td>
+<td class='center center363' valign='top'>
+<table cellpadding='0' cellspacing='0' class='formBannerTitle formBannerTitle363'><tr>
+<td class='titleLeft titleLeft363' valign='top'>
+</td>
+<td class='titleCenter titleCenter363' valign='top'>
+<div class='titleText titleText363'><span class='bannerNormalTitle fk_mainTitle mainTitle mainTitle363'>读者登录</span><div class='bannerTextOutWrap j_doubleTitleSkin'><span class='bannerTextInnerWrap'><p class='titleInnerAidLine0 dividingLine dividingLine363'></p><p class='titleInnerAidLine1 dividingLine dividingLine363'></p><p class='titleInnerAidLine dividingLineDefault dividingLineDefault363'></p></span></div></div>
+</td>
+<td class='titleRight titleRight363' valign='top'>
+</td>
+</tr></table>
+</td>
+<td class='right right363'></td>
+</tr></table>
+
+
+
+<table class='formMiddle formMiddle363' style='height:259px; ' cellpadding='0' cellspacing='0'><tr>
+<td class='formMiddleLeft formMiddleLeft363'></td>
+<td class='formMiddleCenter formMiddleCenter363' valign='top'>
+<div class='formMiddleContent formMiddleContent363 fk-formContentOtherPadding' tabStyle='0'>
+<div class='J_memberLoginPanel memberLoginPanel member'>
+<div class='memberLoginItemList'>
+<div class='J_memberLoginItem memberLoginItem itemSpace'>
+<input id='memberAcct' class='generateInput memberAcctInput' type='text' placeholder='帐号' value='' />
+</div>
+
+<div class='memberLoginItem memberLoginItem_Button'>
+<div class='J_loginButton loginButton loginButton4'>
+<div class='left'></div>
+<div class='middle'>已登录</div>
+<div class='right'></div>
+</div>
+</div>
+</div>
+<div class='signup'>
+<a class='regAcct' hidefocus='true' href='../index.html'>退出登录></a>
+</div>
+</div>
+<div class='memberMsg'></div>
+</div>
+</td>
+<td class='formMiddleRight formMiddleRight363'></td>
+</tr></table>
+
+
+
+
+
+<table class='formBottom formBottom363' cellpadding='0' cellspacing='0'><tr><td class='left left363'></td><td class='center center363'></td><td class='right right363'></td></tr></table>
+<div class='clearfloat clearfloat363'></div>
+</div>
+
+<div id='module302' _indexClass='formIndex2' _modulestyle='1' _moduleid='302'  class='form form302 formIndex2 formStyle1' title='' style='' _side='0' _inTab='0' _inMulMCol='0' _inFullmeasure='0' _inpack='0' _autoHeight='0' _global='true' _independent='false' >
+<table class='formTop formTop302' cellpadding='0' cellspacing='0'><tr><td class='left'></td><td class='center'></td><td class='right'></td></tr></table>
+<table class='formBanner formBanner302' cellpadding='0' cellspacing='0' style=''><tr>
+<td class='left left302'></td>
+<td class='center center302' valign='top'>
+<table cellpadding='0' cellspacing='0' class='formBannerTitle formBannerTitle302'><tr>
+<td class='titleLeft titleLeft302' valign='top'>
+</td>
+<td class='titleCenter titleCenter302' valign='top'>
+<div class='titleText titleText302'><span class='bannerNormalTitle fk_mainTitle mainTitle mainTitle302'>联系方式</span><div class='bannerTextOutWrap j_doubleTitleSkin'><span class='bannerTextInnerWrap'><p class='titleInnerAidLine0 dividingLine dividingLine302'></p><p class='titleInnerAidLine1 dividingLine dividingLine302'></p><p class='titleInnerAidLine dividingLineDefault dividingLineDefault302'></p></span></div></div>
+</td>
+<td class='titleRight titleRight302' valign='top'>
+</td>
+</tr></table>
+</td>
+<td class='right right302'></td>
+</tr></table>
+<table class='formMiddle formMiddle302' style='height:261px; ' cellpadding='0' cellspacing='0'><tr>
+<td class='formMiddleLeft formMiddleLeft302'></td>
+<td class='formMiddleCenter formMiddleCenter302' valign='top'>
+<div class='formMiddleContent formMiddleContent302 fk-formContentOtherPadding' tabStyle='0'>
+<div class='richContent richContent0'><p><strong>联系人：</strong>张芷溦_14241074</p><p>　　　　朱　燊_14241182</p><p>　　　　叶　磊_14241069</p><p>　　　　王祎晴_14241091</p><p><strong>电　话：</strong>010-1424100</p><p><strong>邮　箱：</strong>ZZYW@zzyw.com</p><p><strong>地　址：</strong>北京交通大学经济管理学院信息管理系</p><p><br /></p></div></div>
+</td>
+<td class='formMiddleRight formMiddleRight302'></td>
+</tr></table>
+<table class='formBottom formBottom302' cellpadding='0' cellspacing='0'><tr><td class='left left302'></td><td class='center center302'></td><td class='right right302'></td></tr></table>
+<div class='clearfloat clearfloat302'></div>
+</div>
+
+
+								</div>
+								<div class="containerFormsLeftBottom">
+								</div>
+							</td>
+
+							<td valign="top" id="containerFormsCenter" class="containerFormsCenter">
+					
+								<div id="centerTopForms" class="column forms mainForms centerTopForms" >
+									<div id='module361' _indexClass='formIndex1' _modulestyle='1' _moduleid='361' systemPattern=456 class='form form361 formIndex1 formStyle1 jz-modulePattern456' title='' style='' _side='0' _inTab='0' _inMulMCol='0' _inFullmeasure='0' _inpack='0' _autoHeight='0' _global='false' _independent='false' >
+<table class='formTop formTop361' cellpadding='0' cellspacing='0'><tr><td class='left'></td><td class='center'></td><td class='right'></td></tr></table>
+<table class='formBanner formBanner361' cellpadding='0' cellspacing='0' style=''><tr>
+<td class='left left361'></td>
+<td class='center center361' valign='top'>
+<table cellpadding='0' cellspacing='0' class='formBannerTitle formBannerTitle361'><tr>
+<td class='titleLeft titleLeft361' valign='top'>
+</td>
+<td class='titleCenter titleCenter361' valign='top'>
+<div class='titleText titleText361'><span class='bannerNormalTitle fk_mainTitle mainTitle mainTitle361'>借阅须知</span><div class='bannerTextOutWrap j_doubleTitleSkin'><span class='bannerTextInnerWrap'><span class='doubleTitleWrap doubleTitleWrap361'><p class='mainTitleWrap'><span class='fk_mainTitle mainTitle mainTitle361'>借阅须知</span></p><p class='subTitleWrap'><span class='subTitleLineTop dividingLine dividingLine361'></span><span class='subTitleText fk_auxiliaryTitle auxiliaryTitle auxiliaryTitle361'>副标题</span><span class='subTitleLineBottom dividingLine dividingLine361'></span></p><p class='titleUnderAidLine0 dividingLine dividingLine361'></p></span><p class='titleInnerAidLine0 dividingLine dividingLine361'></p><p class='titleInnerAidLine1 dividingLine dividingLine361'></p><p class='titleInnerAidLine dividingLineDefault dividingLineDefault361'></p></span></div></div>
+</td>
+<td class='titleRight titleRight361' valign='top'>
+</td>
+</tr></table>
+</td>
+<td class='right right361'></td>
+</tr></table>
+<table class='formMiddle formMiddle361' style='height:527px; ' cellpadding='0' cellspacing='0'><tr>
+<td class='formMiddleLeft formMiddleLeft361'></td>
+<td class='formMiddleCenter formMiddleCenter361' valign='top'>
+<div class='formMiddleContent formMiddleContent361 fk-formContentOtherPadding' tabStyle='0'>
+<div class='richContent richContent0'><p><span style="font-size:14px;"><br /></span></p><p><span style="font-size:14px;">一、在到本图书馆借书之前，读者需自行注册，也可到图书管理员处办理注册。</span><br /></p><p><span style="font-size:14px;">二、读者注册后可自行登录网上图书馆查询图书，确定图书有余量并在图书馆内相应书架上取得图书后，持图书到图书管理员处办理借阅手续。</span></p><p><span style="font-size:14px;">三、读者账户需要注销时，请到图书管理员处办理。</span></p><p><span style="font-size:14px;">四、为保证图书的正常流动，网上图书馆不提供自动续借服务，请需要办理续借的读者到图书管理员处办理，一本图书只允许续借一次，续借期仍为一个月。</span></p><p><span style="font-size:14px;">五、为保证图书及图书信息安全，不授予图书管理员直接修改和删除图书信息的权限（可修改图书数量）。</span></p><p><span style="font-size:14px;">六、不允许通过注册成为图书管理员，图书管理员需通过后台数据库由数据库管理员直接添加。</span></p><p><span style="font-size:14px;">七、图书入库后将直接进入仓库存储，上架时需图书管理员再次清点并修改已有图书数量或添加新的图书信息。</span></p><p><span style="font-size:14px;">八、图书逾期不归，读者将会收到短信或电话通知，<span style="font-size:14px;">通知三次或逾期15天仍不归还者，以窃书论处</span>。</span></p><p><span style="font-size:14px;">九、图书馆内同一图书可能有多本，但都具有同一编号，每位读者只可借阅相同编号的图书一本。</span></p><p><span style="font-size:14px;">十、借阅期限为一个月，如有丢失或损坏，照原价赔偿，请读者爱护书籍。</span></p><p><span style="font-size:14px;"><br /></span></p><p><span style="font-size:14px;"> </span></p><p><span style="font-size:14px;">上述规定即为本图书馆管理系统功能设计的所有前提假设，为保证系统的更好地实现，功能有所简化，如有不足或遗漏，还请见谅。</span></p><p><span style="font-size:14px;"><br /></span></p><p><span style="font-size:14px;"><br /></span></p><p style="text-align:right;"><span style="font-size:14px;">Zzyw图书馆管理中心　 </span></p><p style="text-align:right;"><span style="font-size:14px;">2016年11月制定　 　</span></p><p><br /></p></div></div>
+</td>
+<td class='formMiddleRight formMiddleRight361'></td>
+</tr></table>
+<table class='formBottom formBottom361' cellpadding='0' cellspacing='0'><tr><td class='left left361'></td><td class='center center361'></td><td class='right right361'></td></tr></table>
+<div class='clearfloat clearfloat361'></div>
+</div>
+
+
+								</div>
+								<div class="containerFormsCenterMiddle J_containerFormsCenterMiddle">
+									<div id="middleLeftForms" class="column forms mainForms middleLeftForms" style='display:none'
+										
+									>
+									
+									</div>
+									<div id="middleRightForms" class="column forms mainForms middleRightForms" style='display:none'
+										
+									>
+									
+									</div>	
+									<div class="clearfloat"></div>
+								</div>
+								<div id="centerBottomForms" class="column forms mainForms centerBottomForms" style='display:none'>
+									
+								</div>
+							</td>
+
+							<td valign="top" id="containerFormsRight" class="containerFormsRight" style='display:none'>
+								<div class="containerFormsRightTop">
+								</div>
+								<div id="rightForms" class="column forms sideForms rightForms">
+									
+								</div>
+								<div class="containerFormsRightBottom">
+								</div>
+							</td>
+						</tr>
+					</table>
+
+					<div id="bottomForms" class="column forms mainForms bottomForms" style='display:none'>
+						
+					</div>
+
+					<div id="containerPlaceholder" class="containerPlaceholder" ></div>
+					
+				</div>
+
+				<div id="containerMiddleCenterBottom" class="containerMiddleCenterBottom">
+				</div>
+
+			</td>
+
+			<td id="containerMiddleRight" class="containerMiddleRight"></td>
+		</tr>
+		-->
+		
+		
+		
+		
+		
+	</table>
+	
+	<table class="containerBottom" cellpadding='0' cellspacing='0'>
+		<tr valign='top'>
+			<td class="left"></td>
+			<td class="center"></td>
+			<td class="right"></td>
+		</tr>
+	</table>
+</div>
+
+					</div>
+				</td>
+			</tr>
+		</table>		
+
+		<div id="fullmeasureBottomForms" class="fullmeasureContainer forms fk-fullmeasureForms fullmeasureForms fullmeasureBottomForms" 
+		style='display:none'>
+			
+		<wbr style='display:none;' /></div>
+		
+		<table class="absBottomTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="absBottomForms" class="forms sideForms absForms">
+						<div style="position:absolute;"></div><!-- for ie6 -->
+						
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<table id="webFooterTable" class="webFooterTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center" valign="top">
+					
+						<div id="webFooter" class="webFooter">
+							<div id='footer' class='footer' ><table class='footerTop' cellpadding='0' cellspacing='0'><tr valign='top'><td class='topLeft'></td><td class='topCenter'></td><td class='topRight'></td></tr></table><table class='footerMiddle' cellpadding='0' cellspacing='0'><tr valign='top'><td class='middleLeft'></td><td class='middleCenter' align='center'><div class='footerContent'><div class='footerInfo'><p><font face="Arial">©</font>2016 Zzyw图书馆管理系统 版权所有</p></div></div></td><td class='middleRight'></td></tr></table><table class='footerBottom' cellpadding='0' cellspacing='0'><tr valign='top'><td class='bottomLeft'></td><td class='bottomCenter'></td><td class='bottomRight'></td></tr></table></div>
+
+						</div>
+						
+					
+				</td>
+			</tr>
+		</table>
+
+		<div class="clearfloat"></div>
+	</div>	
+</div>
+
+<!--
+<script type="text/javascript" src="http://1.ss.faisys.com/js/comm/jquery/jquery-core.min.js?v=201611071744"></script>
+<script type="text/javascript" src="http://1.ss.faisys.com/js/comm/jquery/jquery-mousewheel.min.js?v=201408111734"></script>
+<script type="text/javascript" src="http://1.ss.faisys.com/js/comm/fai.min.js?v=201611221352"></script>
+<script type="text/javascript" src="http://1.ss.faisys.com/js/comm/jquery/jquery-ui-core.min.js?v=201611221738"></script>
+<script type="text/javascript" src="http://1.ss.faisys.com/js/site.min.js?v=201611241246"></script>
+<script type="text/javascript" src="http://1.ss.faisys.com/js/locale/2052.min.js?v=201611211852"></script>
+<script type="text/javascript" src="http://1.ss.faisys.com/js/comm/ZeroClipboard/ZeroClipboard.min.js?v=201212061014"></script>
+-->
+
+<link type='text/css' href="..\style\7.css" rel='stylesheet' />
+<link type='text/css' href="..\style\8.css" rel='stylesheet' />
+
+</body>
+
+</html>
